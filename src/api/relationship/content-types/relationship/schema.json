@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "relationships",
+  "info": {
+    "singularName": "relationship",
+    "pluralName": "relationships",
+    "displayName": "Relationship"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "people": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::person.person",
+      "inversedBy": "relationships"
+    },
+    "RelationshipTo": {
+      "type": "string"
+    },
+    "RelationshipFrom": {
+      "type": "string"
+    }
+  }
+}

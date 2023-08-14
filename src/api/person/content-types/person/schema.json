@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "people",
+  "info": {
+    "singularName": "person",
+    "pluralName": "people",
+    "displayName": "PERSON",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "PERSONID": {
+      "type": "uid"
+    },
+    "firstname": {
+      "type": "string"
+    },
+    "middlename": {
+      "type": "string"
+    },
+    "lastname": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "timein": {
+      "type": "datetime"
+    },
+    "timeout": {
+      "type": "datetime"
+    },
+    "ScheduleTimeIn": {
+      "type": "time"
+    },
+    "ScheduleTimeOut": {
+      "type": "time"
+    },
+    "relationships": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::relationship.relationship",
+      "mappedBy": "people"
+    }
+  }
+}
